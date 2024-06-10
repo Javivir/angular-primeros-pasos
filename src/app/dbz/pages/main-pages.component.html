@@ -1,0 +1,22 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <dbz-list [characterList]="characters"
+              (onDelete)="onDeleteCharacter($event)"></dbz-list>
+  </div>
+<!-- {{ character }} -->
+  <div class="col">
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+  </div>
+</div>
+
+
+<!--
+
+74:_  Hacerlo private
+  [characterList]="dbzService.characters"  > se creoa un get y  pasa a ser      [characterList]="characters"
+  (onDelete)="dbzService.deleteCharacterById($event)" > se crea el metodo onDeleteCharacter y pasa a ser (onDelete)="onDeleteCharacter($event)
+
+-->
